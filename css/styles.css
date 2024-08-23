@@ -1,3 +1,6 @@
+.hidden {
+  display: none;
+}
 /*===== Variables ====== */
 :root {
   --c-primary-brand: #4d5ae5;
@@ -23,7 +26,7 @@
 body {
   font-family: var(--font-family);
   font-size: var(--f-size);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02em; /* перевірити чи наслідується*/
   line-height: var(--line-height);
   color: var(--c-text);
   background-color: var(--c-white);
@@ -69,10 +72,17 @@ ol {
 
 /*===== Common start ====== */
 
-.container {
-  max-width: 320px;
-  padding: 0 16px;
-  margin: 0 auto;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .c-dark {
@@ -81,6 +91,12 @@ ol {
 
 .c-light {
   color: var(--c-light);
+}
+
+.container {
+  max-width: 320px;
+  padding: 0 16px;
+  margin: 0 auto;
 }
 
 .section {
@@ -94,19 +110,6 @@ ol {
   color: var(--c-dark);
   text-transform: capitalize;
   margin-bottom: 72px;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .btn {
@@ -264,26 +267,40 @@ ol {
 
 /* #region ===== Hero ====== */
 .hero-section {
-  max-width: 1440px;
+  max-width: 320px;
+  padding: 72px 0;
   margin: 0 auto;
-  padding: 188px 0;
   background-color: var(--c-dark);
   background-image: linear-gradient(
       to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero/hero-bg.jpg);
+    url(../images/hero/hero-bg-mob.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/hero-bg-mob@2x.jpg);
+  }
 }
 
 .hero-title {
-  max-width: 496px;
-  margin: 0 auto 48px;
-  font-size: 56px;
-  line-height: 1.07;
+  max-width: 216px;
+  margin: 0 auto 72px;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
   text-align: center;
   color: var(--c-white);
 }
@@ -306,7 +323,11 @@ ol {
   gap: 72px;
 }
 
-.benefits-icon {
+.benefits-item {
+  width: 100%;
+}
+
+.benefits-wrap-icon {
   display: none;
 }
 
@@ -587,7 +608,7 @@ ol {
 }
 /* #endregion ===== Page Footer ====== */
 
-/* #region ===== Modal start ====== */
+/* #region ===== Modal ====== */
 .backdrop {
   position: fixed;
   top: 0;
@@ -793,4 +814,4 @@ ol {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* #endregion ===== Modal end ====== */
+/* #endregion ===== Modal ====== */
