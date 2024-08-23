@@ -83,21 +83,6 @@ ol {
   color: var(--c-light);
 }
 
-.btn {
-  font-weight: 500;
-  border-radius: 4px;
-  line-height: var(--line-height);
-  letter-spacing: 0.04em;
-  color: var(--c-white);
-  background-color: var(--c-primary-brand);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn:hover,
-.btn:focus {
-  background-color: var(--c-pressed-state);
-}
-
 .section {
   padding: 96px 0;
 }
@@ -122,6 +107,21 @@ ol {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.btn {
+  font-weight: 500;
+  border-radius: 4px;
+  line-height: var(--line-height);
+  letter-spacing: 0.04em;
+  color: var(--c-white);
+  background-color: var(--c-primary-brand);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--c-pressed-state);
 }
 /*===== Common end ====== */
 
@@ -174,8 +174,8 @@ ol {
 /* #region ===== Mobile Menu ======  */
 .mobile-menu {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
   background-color: var(--c-white);
@@ -183,15 +183,20 @@ ol {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
+  transform: translate(-50%, -50%);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+.mobile-menu:not(.is-open) {
+  transform: translate(-50%, -100%);
 }
 
 .mobile-menu-container {
@@ -257,7 +262,7 @@ ol {
 
 /* #endregion ===== Page Header ====== */
 
-/*===== Hero start ====== */
+/* #region ===== Hero ====== */
 .hero-section {
   max-width: 1440px;
   margin: 0 auto;
@@ -292,7 +297,7 @@ ol {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
-/*===== Hero end ====== */
+/* #endregion ===== Hero ====== */
 
 /* #region ===== Benefits ====== */
 .benefits-list {
@@ -408,7 +413,7 @@ ol {
 
 /* #endregion =====  Team  ====== */
 
-/*===== Portfolio start ====== */
+/* #region ===== Portfolio ====== */
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -456,9 +461,9 @@ ol {
   border: 1px solid var(--c-accent);
   border-top: none;
 }
-/*===== Portfolio end ====== */
+/* #endregion ===== Portfolio ====== */
 
-/*===== Page Footer start ====== */
+/* #region ===== Page Footer ====== */
 .page-footer {
   padding: 100px 0;
   background-color: var(--c-dark);
@@ -580,9 +585,9 @@ ol {
   fill: var(--c-white);
   margin-left: 16px;
 }
-/*===== Page Footer end ====== */
+/* #endregion ===== Page Footer ====== */
 
-/*===== Modal start ====== */
+/* #region ===== Modal start ====== */
 .backdrop {
   position: fixed;
   top: 0;
@@ -788,4 +793,4 @@ ol {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
-/*===== Modal end ====== */
+/* #endregion ===== Modal end ====== */
