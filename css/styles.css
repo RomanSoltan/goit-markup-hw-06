@@ -339,12 +339,6 @@ ol {
   margin-bottom: 8px;
 }
 
-.benefits-text,
-.team-text,
-.portfolio-text {
-  /* line-height: var(--line-height); */
-}
-
 .benefits-text {
   font-weight: 500;
 }
@@ -476,32 +470,33 @@ ol {
 
 /* #region ===== Page Footer ====== */
 .page-footer {
-  padding: 100px 0;
+  padding: 96px 0;
   background-color: var(--c-dark);
 }
 
 .footer-container {
   display: flex;
-  align-items: baseline;
-}
-
-.footer-content {
-  margin-right: 120px;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 
 .footer-logo {
-  display: inline-block;
+  display: block;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-text {
-  max-width: 264px;
-  line-height: var(--line-height);
   color: var(--c-light);
+}
+
+.media-wrap {
+  margin: 0 auto;
 }
 
 .media-text,
 .subscribe-text {
+  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: var(--line-height);
@@ -541,18 +536,15 @@ ol {
   fill: var(--c-light);
 }
 
-.subscribe-wrap {
-  margin-left: auto;
-}
-
 .footer-form {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .footer-label {
-  width: 264px;
+  width: 100%;
 }
 
 .footer-input {
@@ -565,7 +557,6 @@ ol {
   border: 1px solid var(--c-white);
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  outline: none;
   color: var(--c-white);
   background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -590,6 +581,7 @@ ol {
   min-width: 165px;
   height: 40px;
   padding: 8px 24px;
+  margin: 0 auto;
 }
 
 .subscribe-icon {
