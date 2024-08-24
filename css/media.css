@@ -186,6 +186,13 @@
   .subscribe-btn {
     margin: 0;
   }
+
+  /* Modal */
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -316,6 +323,11 @@
 
   .subscribe-wrap {
     margin-left: auto;
+  }
+
+  /* Modal */
+  .modal-input {
+    padding: 11px 38px;
   }
 }
 
