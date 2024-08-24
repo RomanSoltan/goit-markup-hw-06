@@ -28,7 +28,7 @@
     position: relative;
     display: block;
     padding: 24px 0;
-    font-weight: 500;
+    font-weight: var(--fw-500);
     font-size: var(--f-size);
     line-height: var(--line-height);
     color: var(--c-dark);
@@ -76,7 +76,7 @@
 
   .contacts-link {
     display: block;
-    font-size: 12px;
+    font-size: var(--f-size-sec);
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: var(--c-text);

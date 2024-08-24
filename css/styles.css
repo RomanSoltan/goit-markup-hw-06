@@ -17,13 +17,15 @@
   --second-family: "Raleway", sans-serif;
 
   --f-size: 16px;
+  --f-size-sec: 12px;
+  --fw-500: 500;
   --line-height: 1.5;
 }
 
 body {
   font-family: var(--font-family);
   font-size: var(--f-size);
-  letter-spacing: 0.02em; /* перевірити чи наслідується*/
+  letter-spacing: 0.02em;
   line-height: var(--line-height);
   color: var(--c-text);
   background-color: var(--c-white);
@@ -110,7 +112,7 @@ ol {
 }
 
 .btn {
-  font-weight: 500;
+  font-weight: var(--fw-500);
   border-radius: 4px;
   line-height: var(--line-height);
   letter-spacing: 0.04em;
@@ -243,7 +245,7 @@ ol {
 }
 
 .mobile-contacts-link {
-  font-weight: 500;
+  font-weight: var(--fw-500);
   font-size: 20px;
   line-height: 1.2;
   color: var(--c-text);
@@ -337,7 +339,7 @@ ol {
 }
 
 .benefits-text {
-  font-weight: 500;
+  font-weight: var(--fw-500);
 }
 /* #endregion ===== Benefits ====== */
 
@@ -369,11 +371,15 @@ ol {
 }
 
 .team-subtitle {
-  font-weight: 500;
+  text-align: center;
+}
+
+.team-subtitle,
+.portfolio-subtitle {
+  margin-bottom: 8px;
+  font-weight: var(--fw-500);
   font-size: 20px;
   line-height: 1.2;
-  text-align: center;
-  margin-bottom: 8px;
   color: var(--c-dark);
 }
 
@@ -456,13 +462,6 @@ ol {
   border-top: none;
 }
 
-.portfolio-subtitle {
-  margin-bottom: 8px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  color: var(--c-dark);
-}
 /* #endregion ===== Portfolio ====== */
 
 /* #region ===== Page Footer ====== */
@@ -494,8 +493,8 @@ ol {
 .media-text,
 .subscribe-text {
   text-align: center;
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: var(--fw-500);
+  font-size: var(--f-size);
   line-height: var(--line-height);
   color: var(--c-white);
   margin-bottom: 16px;
@@ -547,7 +546,7 @@ ol {
 .footer-input {
   width: 100%;
   height: 40px;
-  font-size: 12px;
+  font-size: var(--f-size-sec);
   line-height: 2;
   letter-spacing: 0.04em;
   padding: 8px 16px;
@@ -561,7 +560,7 @@ ol {
 
 .footer-input::placeholder {
   font-weight: 400;
-  font-size: 12px;
+  font-size: var(--f-size-sec);
   line-height: 2;
   letter-spacing: 0.04em;
   color: var(--c-white);
@@ -661,7 +660,7 @@ ol {
 }
 
 .modal-text {
-  font-weight: 500;
+  font-weight: var(--fw-500);
   text-align: center;
   color: var(--c-dark);
   margin-bottom: 16px;
@@ -673,7 +672,7 @@ ol {
 
 .modal-label {
   display: block;
-  font-size: 12px;
+  font-size: var(--f-size-sec);
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--c-label-text);
@@ -719,7 +718,7 @@ ol {
   display: block;
   width: 100%;
   height: 120px;
-  font-size: 12px;
+  font-size: var(--f-size-sec);
   line-height: 1.17;
   letter-spacing: 0.04em;
   border: 1px solid var(--c-modal-grey);
@@ -738,7 +737,7 @@ ol {
 
 .modal-textarea::placeholder {
   font-weight: 400;
-  font-size: 12px;
+  font-size: var(--f-size-sec);
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--c-modal-grey);
@@ -752,7 +751,7 @@ ol {
   display: flex;
   align-items: center;
   font-weight: 400;
-  font-size: 12px;
+  font-size: var(--f-size-sec);
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--c-label-text);
